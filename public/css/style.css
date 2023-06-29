@@ -1,0 +1,209 @@
+:root{
+    background-color:rgb(255, 255, 255);
+    /* overflow: hidden; */
+    
+}
+
+@media screen and (max-width:900px){
+   :root{
+     --container-width:320px
+   }
+
+   .img{
+    display: none;
+   }
+
+   #fileURL{
+    max-width:80%;
+   }
+
+
+   .lebels , .input{
+    flex-direction: column;
+   }
+
+ 
+    .mail_section .mail_details input{
+        max-width: max-content;
+    }
+
+   
+
+
+
+
+}
+
+
+
+
+/* body{
+    background-image: url('../img/file-transfer.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.fileicon{
+    position: relative;
+    transition: all .2s ease;
+}
+
+
+.fileicon img{
+    position: absolute;
+    transform-origin: bottom;
+    transition: transform 250ms ease-in-out;
+}
+
+.fileicon .center{
+    z-index: 2;
+  }
+
+
+
+  .fileicon .left, 
+.fileicon .right {
+    filter:grayscale(0.5);
+    transform: scale(0.9);
+}
+
+
+
+.dragged .fileicon .right{
+    transform: rotate(10deg) translateX(20px) scale(0.9);
+   
+
+}
+
+.dragged .fileicon .left{
+    transform: rotate(-10deg) translateX(-20px) scale(0.9);
+    
+}
+
+.dragged .fileicon .center{
+  transform: translateY(-5px);
+}
+
+#fileInput{
+ display: none;
+}
+
+.title{
+    font-weight: 600;
+    color: rgb(211, 27, 27);
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.browseBtn{
+    cursor: pointer;
+    color: rgb(98, 129, 233);
+}
+
+.progress_sec{
+    padding-top: 10px;
+    display: none;
+
+}
+
+.mail_section ,.link_section{
+    display: none;
+}
+
+
+.progress_sec .progress_div{
+
+background-color: #c5e7e085;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+border-radius: 2px;
+height: 60px;
+width:0%;
+transform: scaleX(1);
+transform-origin: left;
+transition: width.12s linear ;
+padding: 5px 0px;
+
+}
+
+.progress_div .small_parent .small_bar{
+
+    background-color: #3e62c4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    height: 1px;
+    width:0%;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: width.12s linear ;
+    
+    
+    }
+
+.progress_div .small_parent{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+}   
+    
+    
+
+.link_section div{
+    height:35px;
+    color: rgba(90, 78, 78, 0.877);
+    text-align: justify;
+    padding: 2px;
+}
+
+.mail_section .mail_details{
+    padding: 15px 20px;
+    background-color: rgb(210 235 237 / 48%);;
+    text-align: center;
+}
+
+.mail_section button{
+ padding: 10px 0px;
+   text-align: center;
+}
+
+.mail_section .mail_details input {
+    outline: none;
+    background-color:rgb(210 235 237 / 0%);
+    border-bottom: 2px solid black;
+    width: 230px;
+}
+
+.link_section input[type="text"]{
+align-content: center;
+background-color:rgba(132, 239, 245, 0.808);
+color: rgba(0, 0, 0, 0.87);
+
+
+}
+
+
+.mail_details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toast{
+    position: absolute;
+    background-color: rgb(148, 226, 226);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    text-align: center;
+    left: 50%;
+    bottom:10;
+    padding:5px 13px;
+    transform: translate(-60%,-30px);
+    transition: transform ease-in-out 0.2s;
+    color: #000;
+    font-size: 18px;
+    font-weight:300;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 5px;
+    display: none;
+
+}
+
