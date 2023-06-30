@@ -106,7 +106,7 @@ xhr.upload.onprogress = updateProgress;
 
 xhr.upload.onerror = () => {
  showToast(`Error on Upload ${xhr.statusText}`)
- uploading.style.display = 'none';
+ progress_section.style.display = 'none';
 }
 
   xhr.open("POST", uploadURL);
