@@ -11,6 +11,16 @@ app.use(express.json());
 const connectDB = require('./config/db');
 connectDB();
 
+//CORS
+const Corssetup = {
+   origin : process.env.ALLOWED_CLIENTS.split(',');
+}
+
+
+
+
+
+
 //Template Engine
 app.set('views' , path.join(__dirname, './views'));
 app.set('view engine' , 'ejs');
