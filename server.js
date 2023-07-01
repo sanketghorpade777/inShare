@@ -12,9 +12,9 @@ const connectDB = require('./config/db');
 connectDB();
 
 //CORS
-const Corssetup = {
-   origin : process.env.ALLOWED_CLIENTS.split(',');
-}
+// const Corssetup = {
+//    origin : process.env.ALLOWED_CLIENTS.split(',');
+// }
 
 
 
