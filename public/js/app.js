@@ -1,3 +1,4 @@
+
 const dragZone = document.querySelector('#dragZone');
 const fileInput = document.getElementById('fileInput');
 const browseBtn = document.querySelector('.browseBtn');
@@ -70,8 +71,8 @@ fileInput.addEventListener('change', ()=> {
 });
 
 // Upload file in Xhr (drag and drop only)
-
-const host = "http://localhost:3000";
+// console.log('app url',process.env.APP_BASE_URL);
+const host = "https://inshareapp-sg.onrender.com";
 const uploadURL = host + "/api/files";
 const emailURL = host + "/api/files/send";
 
