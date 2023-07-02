@@ -11,12 +11,7 @@ app.use(express.json());
 const connectDB = require('./config/db');
 connectDB();
 
-//CORS
-// const Corssetup = {
-//    origin : process.env.ALLOWED_CLIENTS.split(',');
-// }
-
-
+//CORs
 
 
 

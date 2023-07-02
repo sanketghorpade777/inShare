@@ -71,8 +71,8 @@ fileInput.addEventListener('change', ()=> {
 });
 
 // Upload file in Xhr (drag and drop only)
-// console.log('app url',process.env.APP_BASE_URL);
-const host = "https://inshareapp-sg.onrender.com";
+
+const host = "https://inshareapp-sg.onrender.com/";
 const uploadURL = host + "/api/files";
 const emailURL = host + "/api/files/send";
 
@@ -133,6 +133,7 @@ xhr.upload.onerror = () => {
  //copy clipboard content
  function copyClipboard(){
   fileURL.select();
+  console.log(fileURL.value);
   navigator.clipboard.writeText(fileURL.value);
   showToast("Link Copied");
  

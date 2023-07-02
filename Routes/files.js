@@ -6,7 +6,7 @@ const {v4: uuid4} = require('uuid');
 require('dotenv').config();
 
 
-
+console.log('app url', process.env.APP_BASE_URL)
 let storage = multer.diskStorage({
     destination : (req, file, cb) => cb(null,'uploads/'),
     filename: (req , file, cb) => {
@@ -39,6 +39,7 @@ router.post('/', (req,res)=>{
 
 }
       const fileName = req.file.filename;
+const downloadurl = process.env.APP_BASE_URL;
 
 //store data in database
 
@@ -52,8 +53,8 @@ router.post('/', (req,res)=>{
 
 
   const response = await file.save();
-  return res.json({file: `${process.env.APP_BASE_URL}/files/${response.uuid}`});
 
+  return res.json({file: `${process.env.APP_BASE_URL}/files/${response.uuid}`});
 
   })
 
