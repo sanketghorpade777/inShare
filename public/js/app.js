@@ -72,7 +72,7 @@ fileInput.addEventListener('change', ()=> {
 
 // Upload file in Xhr (drag and drop only)
 
-const host = "https://inshareapp-sg.onrender.com/";
+const host = "https://inshareapp-sg.onrender.com";
 const uploadURL = host + "/api/files";
 const emailURL = host + "/api/files/send";
 
